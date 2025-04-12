@@ -101,3 +101,9 @@ ENV/
 .mypy_cache/
 
 .vscode/*
+
+# font files
+*.ttf
+
+# images
+*.jpg

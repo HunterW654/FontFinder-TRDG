@@ -2,6 +2,10 @@
 
 A synthetic data generator for text recognition
 
+# READ ME: Write-Up for CPSC 381/581
+
+We used this repository for image generation. After collecting our approximately 3000 fonts, we put them into this repository. Then, we generated hundreds of thousands of word images in different fonts to create our dataset for this project. We gitignored the font files and images, but they can be found on Microsoft OneDrive and Google Drive respectively. The significant changes we made were printing out the fonts so we could debug and remove bad font files (i.e. emoji fonts, broken font files, rare language characters, blank, unicode), and we added some code to put the images in respective folders so that they were labelled upon creation for supervised learning.
+
 ## What is it for?
 
 Generating text image samples to train an OCR software. Now supporting non-latin text! For a more thorough tutorial see [the official documentation](https://textrecognitiondatagenerator.readthedocs.io/en/latest/index.html).

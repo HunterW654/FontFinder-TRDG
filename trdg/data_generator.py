@@ -61,6 +61,8 @@ class FakeTextDataGenerator(object):
         horizontal_margin = margin_left + margin_right
         vertical_margin = margin_top + margin_bottom
 
+        print(font.split('\\')[-1].split('.')[0])
+
         ##########################
         # Create picture of text #
         ##########################
@@ -269,6 +271,17 @@ class FakeTextDataGenerator(object):
 
         # Save the image
         if out_dir is not None:
+
+
+            # ADDED CODE FOR DIRECTORY PLACEMENTS FOR IMAGE LABELLING
+
+            out_dir = out_dir + font.split('\\')[-1].split('.')[0] + "/"
+            if not os.path.exists(out_dir):
+                os.makedirs(out_dir)
+
+
+
+
             final_image.save(os.path.join(out_dir, image_name))
             if output_mask == 1:
                 final_mask.save(os.path.join(out_dir, mask_name))

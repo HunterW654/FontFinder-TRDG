@@ -107,3 +107,8 @@ ENV/
 
 # images
 *.jpg
+
+# NP and label files
+*.npy
+*.npz
+*.pkl
